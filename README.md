@@ -1,4 +1,4 @@
-# web-development-knowledge-and-tools
+# Web Development Knowledge & Tools
 To gather every thing about web development knowledge and tools
 
 # [Frontend](https://github.com/nawawishkid/web-development-knowledge-and-tools/tree/master/frontend)
