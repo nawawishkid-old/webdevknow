@@ -1,5 +1,0 @@
-# PHP
-
-## Knowledge
-
-## Tools
