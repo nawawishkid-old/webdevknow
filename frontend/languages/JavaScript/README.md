@@ -1,5 +1,6 @@
-# JavaScript
+# Frontend Development: Language
 ## JavaScript
+
 ## Libraries
 ### 1) [jQuery](libraries/jQuery/README.md)
 ## Frameworks
