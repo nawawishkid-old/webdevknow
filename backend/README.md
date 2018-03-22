@@ -19,3 +19,5 @@
 - Proficient understanding of code versioning tools, such as Git
 - Proficient understanding of OWASP security principles
 - Understanding of “session management” in a distributed server environment
+
+[A beginner's guide to backend development](https://www.upwork.com/hiring/development/a-beginners-guide-to-back-end-development/)
