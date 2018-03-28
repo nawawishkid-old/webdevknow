@@ -2,12 +2,12 @@
 ## 1. เอารูป
 ### 1.1 `the_post_thumbnail( string|array $size, array $attr )`
 https://developer.wordpress.org/reference/functions/the_post_thumbnail/
-#### Arguments
+** Arguments **
 * `$size` ของ WordPress ได้แก่ 'thumbnail', 'medium', 'medium_large', 'full'  
 * `$attr` คือ HTML attributes ที่จะใส่ไปใน `<img>`
-#### Return
+** Return **
 * return เป็น HTML Image tag: `<img>`
-#### การใช้งาน
+** การใช้งาน **
 * ใช้ใน WordPress Loop เท่านั้น
 ```php
 <div>
@@ -25,11 +25,11 @@ https://developer.wordpress.org/reference/functions/the_post_thumbnail/
 ```
 ### 1.2 `the_post_thumbnail_url( string|array $size )`
 https://developer.wordpress.org/reference/functions/the_post_thumbnail_url/
-#### Arguments
+** Arguments **
 * `$size` เหมือน function ข้างบน
-#### Return
+** Return **
 * return URL ของรูป ไม่ใช่ HTML Image tag
-#### การใช้งาน
+** การใช้งาน **
 * ใช้สำหรับดึง URL ของรูป
 ```php
 <img src="<?php the_post_thumbnail_url(); ?>" />
