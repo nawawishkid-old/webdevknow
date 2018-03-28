@@ -8,10 +8,10 @@
 
 ## 2. [Frontend](frontend/README.md)
 ### [Web Design](frontend/designing/README.md)
-### [Language](frontend/languages/README.md)
+### [Languages](frontend/languages/README.md)
 
 ## 3. [Backend](backend/README.md)
 ### [Database](backend/database/README.md)
 ### [Security](backend/security/README.md)
-### [Language](backend/languages/README.md)
+### [Languages](backend/languages/README.md)
 
