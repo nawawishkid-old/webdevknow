@@ -1,12 +1,12 @@
 # รูปพาดหัวของโพสต์
 ## 1. เอารูป
 ### 1.1 `the_post_thumbnail( string|array $size, array $attr )`
-https://developer.wordpress.org/reference/functions/the_post_thumbnail/
+https://developer.wordpress.org/reference/functions/the_post_thumbnail/  
 **Arguments**  
 * `$size` ของ WordPress ได้แก่ 'thumbnail', 'medium', 'medium_large', 'full'  
-* `$attr` คือ HTML attributes ที่จะใส่ไปใน `<img>`
+* `$attr` คือ HTML attributes ที่จะใส่ไปใน `<img>`  
 **Return**  
-* return เป็น HTML Image tag: `<img>`
+* return เป็น HTML Image tag: `<img>`  
 **การใช้งาน**  
 * ใช้ใน WordPress Loop เท่านั้น
 ```php
@@ -24,11 +24,11 @@ https://developer.wordpress.org/reference/functions/the_post_thumbnail/
     sizes="(max-width: 768px) 100vw, 768px">
 ```
 ### 1.2 `the_post_thumbnail_url( string|array $size )`
-https://developer.wordpress.org/reference/functions/the_post_thumbnail_url/
+https://developer.wordpress.org/reference/functions/the_post_thumbnail_url/  
 **Arguments**  
-* `$size` เหมือน function ข้างบน
+* `$size` เหมือน function ข้างบน  
 **Return**  
-* return URL ของรูป ไม่ใช่ HTML Image tag
+* return URL ของรูป ไม่ใช่ HTML Image tag  
 **การใช้งาน**  
 * ใช้สำหรับดึง URL ของรูป
 ```php
