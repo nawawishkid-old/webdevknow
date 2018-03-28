@@ -23,9 +23,10 @@ https://developer.wordpress.org/reference/functions/the_post_thumbnail/
     srcset="https://example.tld/wp-content/uploads/2018/03/Screenshot-from-2018-03-20-13-07-39-768x431.png 768w, https://example.tld/wp-content/uploads/2018/03/Screenshot-from-2018-03-20-13-07-39-300x168.png 300w, https://example.tld/wp-content/uploads/2018/03/Screenshot-from-2018-03-20-13-07-39-1024x575.png 1024w, https://example.tld/wp-content/uploads/2018/03/Screenshot-from-2018-03-20-13-07-39-600x337.png 600w, https://example.tld/wp-content/uploads/2018/03/Screenshot-from-2018-03-20-13-07-39.png 1327w" 
     sizes="(max-width: 768px) 100vw, 768px">
 ```
-### 1.2 `the_post_thumbnail_url()`
+### 1.2 `the_post_thumbnail_url( string|array $size )`
 https://developer.wordpress.org/reference/functions/the_post_thumbnail_url/
 #### Arguments
+* `$size` เหมือน function ข้างบน
 #### Return
 * return URL ของรูป ไม่ใช่ HTML Image tag
 #### การใช้งาน
