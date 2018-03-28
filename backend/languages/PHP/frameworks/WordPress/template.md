@@ -1,5 +1,6 @@
 # Template
 https://developer.wordpress.org/themes/basics/post-types/  
+
 | Post type | Template |
 | --- | --- |
 | Post | single.php, single-post.php, category.php, tag.php, taxonomy.php, archive.php, author.php, date.php, search.php, home.php, index.php |
