@@ -1,7 +1,7 @@
 # Hooks
 
 ## Action Hooks
-| Functions | Hook | Description |
+| Function | Hook | Description |
 | --- | --- | --- |
 | `register_sidebar` | `widgets_init` | Register area for widgets |
 | `add_theme_support` | `after_setup_theme` | Allow user to modify specific part of the theme |
