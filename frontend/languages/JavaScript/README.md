@@ -1,4 +1,23 @@
 # Frontend Development: Language
+
+### Immediately-invoked function expression (IIFE)
+https://en.wikipedia.org/wiki/Immediately-invoked_function_expression  
+สองฟังก์ชั่นข้างล่างนี้ทำงานได้เหมือนกัน แม้อันที่สองจะดูแหม่ง ๆ หน่อยก็เถอะ  
+```javascrip
+(function() {
+  alert('IIFE!');
+})();
+
+(function() {
+  alert('I I F E ???');
+}());
+```
+[JS bin](http://jsbin.com/jexezifaji/1/edit?js,output)  
+
+### Module pattern
+https://stackoverflow.com/questions/17776940/javascript-module-pattern-with-example  
+
+
 ## JavaScript
 
 ## Libraries
