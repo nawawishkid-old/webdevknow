@@ -28,25 +28,27 @@ Setting ไม่ได้เป็น element ให้เราเห็นอ
 
 ### 4. Panel
 จริง ๆ แล้ว panel ก็คือ section นั่นแหละ แต่เป็น section ที่มี section อื่น ๆ อยู่ภายใน จากตารางข้างบนในหัวข้อ section จะเห็นว่าผมมาร์กดอกจันท์ไว้ตรง Menus และ Widgets เพื่อจะบอกว่าสองตัวนี้นับว่าเป็น panel เพราะถ้าเราคลิกมัน เราจะเจอ section อื่น ๆ อยู่ข้างใน  
-
+## การเพิ่ม custom customizer
 เราเพิ่ม custom customizer ของเราเองได้โดยการใช้ PHP class ของ WordPress ชื่อว่า `WP_Customize_Manager` คลาสนี้มี method สำหรับการเพิ่ม customizer อยู่ 4 methods ได้แก่:  
 
-* add_panel
-* add_section
-* add_control
-* add_setting
+* `add_panel`
+* `add_section`
+* `add_control`
+* `add_setting`
 
-Method แต่ละตัวมีไว้ทำอะไรดูได้จากชื่อเลยครับ  
-ในแต่ละ  panel/section/control/setting ที่เราจะเพิ่มเข้าไป ล้วนต้องมี ID เพื่อใช้ในการอ้างอิง  
+Method แต่ละตัวมีไว้ทำอะไรดูได้จากชื่อเลยครับ ในแต่ละ  panel/section/control/setting ที่เราจะเพิ่มเข้าไป ล้วนต้องมี ID เพื่อใช้ในการอ้างอิง  
+
 ปัญหาของการเพิ่ม customizer ที่ผมเจอคือ เพิ่ม section แล้วแต่ไม่เห็นมี section ที่เพิ่มเลย
 ลองเพิ่ม panel ก็ไม่มีให้เห็น งมอยู่สักพักจึงรู้ว่า  
+  
+> **ต้องเขียน `add_control` หลังจาก `add_section` และ `add_setting` แล้วเท่านั้น**
+  
+เพราะ `add_control` ต้องอ้างอิง ID ของ setting และ section จริง ๆ `add_section` ก็ต้องอ้างอิง ID ของ panel (ถ้าเพิ่ม panel ด้วยอ่ะนะ) ด้วยเช่นกัน แต่เราจะเขียน `add_panel` หลัง `add_section` ก็ยังทำงานได้ปกติ ผมจึงคิดว่าเป็นที่การดีไซน์ลำดับการทำงานของ code ใน `WP_Customize_Manager` มากกว่า  
 
-> ต้องเขียน `add_control` หลังจาก `add_section` และ `add_setting` แล้วเท่านั้น
+พอ control หา section ให้ตัวเองอยู่ไม่เจอ section ก็ว่าง พอ section ว่าง panel ก็ว่างไปด้วย ทำให้ไม่มีอะไรโผล่มาให้เห็นบนหน้าจอซักกะอัน  
 
-เพราะ `add_control` ต้องอ้างอิง ID ของ setting และ section  
-จริง ๆ `add_section` ก็ต้องอ้างอิง ID ของ panel (ถ้าเพิ่ม panel ด้วยอ่ะนะ) ด้วยเช่นกัน แต่เราจะเขียน `add_panel` หลัง `add_section` ก็ยังทำงานได้ปกติ ผมจึงคิดว่าเป็นที่การดีไซน์ลำดับการทำงานของ code ใน `WP_Customize_Manager` มากกว่า  
-พอ control หา section ให้ตัวเองอยู่ไม่เจอ section ก็ว่าง พอ section ว่าง panel ก็ว่างไปด้วย ทำให้ไม่มีอะไรโผล่มาให้เห็นบนหน้าจอซักกะอัน
 **ตัวอย่าง**  
+
 เขียนแบบนี้จะไม่มีอะไรเกิดขึ้น
 ```php
 $customizer->add_section( 'section_id', [
