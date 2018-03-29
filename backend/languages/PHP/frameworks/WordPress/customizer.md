@@ -8,6 +8,7 @@ Customizer คือตัวปรับแต่งธีมใน live previe
 ## องค์ประกอบของ customizer มีอะไรบ้าง?
 ### 1. Section
 Section ก็คือเมนูต่าง ๆ ที่เราเห็นอยู่ใน customizer sidebar เวลาเข้าไป edit ใน live preview section เดิม ๆ ของ WordPress มีอยู่หลายอัน ขึ้นอยู่กับธีมของเราว่า support อะไรบ้างด้วย ถ้า support ทุกอย่าง เราก็จะเห็น section ต่าง ๆ ดังนี้:
+
 | ชื่ออังกฤษ | ชื่อไทย | ID | รหัสลำดับ |
 | --- | --- | --- | --- |
 | Site Title & Tagline | อัตลักษณ์เว็บไซต์ | title_tagline | 20 |
