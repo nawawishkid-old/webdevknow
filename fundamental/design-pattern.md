@@ -2,7 +2,7 @@
 - https://en.wikipedia.org/wiki/Design_Patterns  
 - https://sourcemaking.com/design_patterns
 
-## Creational pattern
+## 1. Creational pattern
 ### Abstract factory
 - https://sourcemaking.com/design_patterns/abstract_factory
 
@@ -21,7 +21,7 @@
 ### Singleton
 - https://en.wikipedia.org/wiki/Singleton_pattern  
 
-## Structural pattern
+## 2. Structural pattern
 ### Adapter
 - 
 
@@ -46,7 +46,7 @@
 ### Proxy
 - 
 
-## Behavioral pattern
+## 3. Behavioral pattern
 ### Chain of responsibility
 - 
 
