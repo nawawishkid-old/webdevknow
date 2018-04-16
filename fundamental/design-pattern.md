@@ -6,7 +6,13 @@
 ## 1. Creational pattern
 ### Abstract factory
 Provide an interface for creating families of related or dependent objects without specifying their concrete classes.[1]  
-Provides a way to encapsulate a group of individual factories that have a common theme without specifying their concrete classes.[2]  
+Provides a way to encapsulate a group of individual factories that have a common theme without specifying their concrete classes.[2]  - [1] https://sourcemaking.com/design_patterns/abstract_factory
+- [2] https://en.wikipedia.org/wiki/Abstract_factory_pattern
+- Factory/Abstract factory confusion: https://stackoverflow.com/questions/4719822/factory-abstract-factory-confusion
+- Factory: https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)
+
+#### Example
+JSON illustration:
 ```json
 {
 	"AbstractSomethingFactory": {
@@ -39,10 +45,68 @@ Provides a way to encapsulate a group of individual factories that have a common
 	}
 }
 ```
-- [1] https://sourcemaking.com/design_patterns/abstract_factory
-- [2] https://en.wikipedia.org/wiki/Abstract_factory_pattern
-- Factory/Abstract factory confusion: https://stackoverflow.com/questions/4719822/factory-abstract-factory-confusion
-- Factory: https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)
+PHP:
+```php
+<?php
+class AbstractSomethingFactory
+{
+		abstract public function createProduct();
+}
+
+class ConcreteSomethingFactoryOne extends AbstractSomethingFactory
+{
+	public function createProduct()
+	{
+		return new ConcreteProductOne();
+	}
+}
+
+class ConcreteSomethingFactoryTwo extends AbstractSomethingFactory
+{
+	public function createProduct()
+	{
+		return new ConcreteProductTwo();
+	}
+}
+
+class ConcreteSomethingFactoryN extends AbstractSomethingFactory
+{
+	public function createProduct()
+	{
+		return new ConcreteProductN();
+	}
+}
+
+class AbstractProduct
+{
+	abstract public function doSomething();
+}
+
+class ConcreteProductOne
+{
+	public function doSomething()
+	{
+		// do something
+	}
+}
+
+class ConcreteProductTwo
+{
+	public function doSomething()
+	{
+		// do something
+	}
+}
+
+class ConcreteProductN
+{
+	public function doSomething()
+	{
+		// do something
+	}
+}
+```
+
 
 ### Builder
 - https://sourcemaking.com/design_patterns/builder
