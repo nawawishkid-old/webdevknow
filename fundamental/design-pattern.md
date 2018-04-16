@@ -1,13 +1,48 @@
 # Design pattern
 - https://en.wikipedia.org/wiki/Design_Patterns  
 - https://sourcemaking.com/design_patterns
+- Design patterns in PHP: http://designpatternsphp.readthedocs.io/en/latest/Creational/AbstractFactory/README.html
 
 ## 1. Creational pattern
 ### Abstract factory
 Provide an interface for creating families of related or dependent objects without specifying their concrete classes.[1]  
 Provides a way to encapsulate a group of individual factories that have a common theme without specifying their concrete classes.[2]  
+```json
+{
+	"AbstractSomethingFactory": {
+		"createProduct": ""
+	},
+
+	"ConcreteSomethingFactoryOne": {
+		"extends": "AbstractSomethingFactory",
+		"createProduct": "new ConcreteProductOne"
+	},
+	"ConcreteSomethingFactoryTwo": {
+		"extends": "AbstractSomethingFactory",
+		"createProduct": "new ConcreteProductTwo"
+	},
+	"ConcreteSomethingFactoryN": {
+		"extends": "AbstractSomethingFactory",
+		"createProduct": "new ConcreteProductN"
+	},
+
+	"AbstractProduct": {},
+
+	"ConcreteProductOne": {
+		"extends": "AbstractProduct"
+	},
+	"ConcreteProductTwo": {
+		"extends": "AbstractProduct"
+	},
+	"ConcreteProductN": {
+		"extends": "AbstractProduct"
+	}
+}
+```
 - [1] https://sourcemaking.com/design_patterns/abstract_factory
 - [2] https://en.wikipedia.org/wiki/Abstract_factory_pattern
+- Factory/Abstract factory confusion: https://stackoverflow.com/questions/4719822/factory-abstract-factory-confusion
+- Factory: https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)
 
 ### Builder
 - https://sourcemaking.com/design_patterns/builder
