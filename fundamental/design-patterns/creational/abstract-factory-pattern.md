@@ -6,7 +6,7 @@
 > Provides a way to encapsulate a group of individual factories that have a common theme without specifying their concrete classes. In normal usage, the client software creates a concrete implementation of the abstract factory and then uses the generic interface of the factory to create the concrete objects that are part of the theme. The client doesn't know (or care) which concrete objects it gets from each of these internal factories, since it uses only the generic interfaces of their products. This pattern separates the details of implementation of a set of objects from their general usage and relies on object composition, as object creation is implemented in methods exposed in the factory interface.<sup>[[2]](#sources)</sup>  
 
 ## Examples
-### JSON illustration:
+#### JSON illustration:
 ```json
 {
   "AbstractSomethingFactory": {
@@ -39,7 +39,7 @@
   }
 }
 ```
-### PHP #1:
+#### PHP #1:
 https://en.wikipedia.org/wiki/Abstract_factory_pattern#PHP_example
 ```php
 <?php
@@ -104,7 +104,7 @@ switch ($appearance) {
 $button = $factory->createButton();
 $button->paint();
 ```
-### PHP #2:
+#### PHP #2:
 https://sourcemaking.com/design_patterns/abstract_factory/php/2
 ```php
 <?php
@@ -274,7 +274,7 @@ class SamsPHPBook extends AbstractPHPBook {
 
 ?>
 ```
-### PHP #3:
+#### PHP #3:
 https://sourcemaking.com/design_patterns/abstract_factory/php/3
 ```php
 <?php
@@ -346,7 +346,7 @@ $factory = $abstractfactory::getFactory();
 $db = $factory->createInstance();
 ?>
 ```
-### PHP #4:
+#### PHP #4:
 ```php
 <?php
 
