@@ -15,34 +15,34 @@ Provides a way to encapsulate a group of individual factories that have a common
 JSON illustration:
 ```json
 {
-	"AbstractSomethingFactory": {
-		"createProduct": ""
-	},
+  "AbstractSomethingFactory": {
+    "createProduct": ""
+  },
 
-	"ConcreteSomethingFactoryOne": {
-		"extends": "AbstractSomethingFactory",
-		"createProduct": "new ConcreteProductOne"
-	},
-	"ConcreteSomethingFactoryTwo": {
-		"extends": "AbstractSomethingFactory",
-		"createProduct": "new ConcreteProductTwo"
-	},
-	"ConcreteSomethingFactoryN": {
-		"extends": "AbstractSomethingFactory",
-		"createProduct": "new ConcreteProductN"
-	},
+  "ConcreteSomethingFactoryOne": {
+    "extends": "AbstractSomethingFactory",
+    "createProduct": "new ConcreteProductOne"
+  },
+  "ConcreteSomethingFactoryTwo": {
+    "extends": "AbstractSomethingFactory",
+    "createProduct": "new ConcreteProductTwo"
+  },
+  "ConcreteSomethingFactoryN": {
+    "extends": "AbstractSomethingFactory",
+    "createProduct": "new ConcreteProductN"
+  },
 
-	"AbstractProduct": {},
+  "AbstractProduct": {},
 
-	"ConcreteProductOne": {
-		"extends": "AbstractProduct"
-	},
-	"ConcreteProductTwo": {
-		"extends": "AbstractProduct"
-	},
-	"ConcreteProductN": {
-		"extends": "AbstractProduct"
-	}
+  "ConcreteProductOne": {
+    "extends": "AbstractProduct"
+  },
+  "ConcreteProductTwo": {
+    "extends": "AbstractProduct"
+  },
+  "ConcreteProductN": {
+    "extends": "AbstractProduct"
+  }
 }
 ```
 PHP:
@@ -51,60 +51,60 @@ PHP:
 
 class AbstractSomethingFactory
 {
-		abstract public function createProduct();
+    abstract public function createProduct();
 }
 
 class ConcreteSomethingFactoryOne extends AbstractSomethingFactory
 {
-		public function createProduct()
-		{
-				return new ConcreteProductOne();
-		}
+    public function createProduct()
+    {
+        return new ConcreteProductOne();
+    }
 }
 
 class ConcreteSomethingFactoryTwo extends AbstractSomethingFactory
 {
-		public function createProduct()
-		{
-				return new ConcreteProductTwo();
-		}
+    public function createProduct()
+    {
+        return new ConcreteProductTwo();
+    }
 }
 
 class ConcreteSomethingFactoryN extends AbstractSomethingFactory
 {
-		public function createProduct()
-		{
-				return new ConcreteProductN();
-		}
+    public function createProduct()
+    {
+        return new ConcreteProductN();
+    }
 }
 
 class AbstractProduct
 {
-		abstract public function doSomething();
+    abstract public function doSomething();
 }
 
 class ConcreteProductOne extends AbstractProduct
 {
-		public function doSomething()
-		{
-				// do something
-		}
+    public function doSomething()
+    {
+        // do something
+    }
 }
 
 class ConcreteProductTwo extends AbstractProduct
 {
-		public function doSomething()
-		{
-				// do something
-		}
+    public function doSomething()
+    {
+        // do something
+    }
 }
 
 class ConcreteProductN extends AbstractProduct
 {
-		public function doSomething()
-		{
-				// do something
-		}
+    public function doSomething()
+    {
+        // do something
+    }
 }
 ```
 
