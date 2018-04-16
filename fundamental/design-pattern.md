@@ -4,7 +4,10 @@
 
 ## 1. Creational pattern
 ### Abstract factory
-- https://sourcemaking.com/design_patterns/abstract_factory
+Provide an interface for creating families of related or dependent objects without specifying their concrete classes.[1]  
+Provides a way to encapsulate a group of individual factories that have a common theme without specifying their concrete classes.[2]  
+- [1] https://sourcemaking.com/design_patterns/abstract_factory
+- [2] https://en.wikipedia.org/wiki/Abstract_factory_pattern
 
 ### Builder
 - https://sourcemaking.com/design_patterns/builder
