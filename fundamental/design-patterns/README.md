@@ -12,65 +12,27 @@
 - [Singleton](creational/singleton-pattern.md)
 
 ## 2. Structural pattern
-### Adapter
-- 
-
-### Bridge
-- 
-
-### Composite
-- 
-
-### Decorator
-- 
-
-### Facade
-- https://en.wikipedia.org/wiki/Facade_pattern  
-
-### Flyweight
-- 
-
-### Private class data
-- 
-
-### Proxy
-- 
+- Adapter
+- Bridge
+- Composite
+- Decorator
+- Facade
+- Flyweight
+- Private class data
+- Proxy
 
 ## 3. Behavioral pattern
-### Chain of responsibility
-- 
-
-### Command
-- 
-
-### Interpreter
--
-
-### Iterator
-- 
-
-### Mediator
-- 
-
-### Memento
-- 
-
-### Null object
-- 
-
-### Observer
-- 
-
-### State
-- 
-
-### Strategy
-- 
-
-### Template method
--
-
-### Visitor
-- 
+- Chain of responsibility
+- Command
+- Interpreter
+- Iterator
+- Mediator
+- Memento
+- Null object
+- Observer
+- State
+- Strategy
+- Template method
+- Visitor
 
 

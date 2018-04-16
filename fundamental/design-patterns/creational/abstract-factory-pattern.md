@@ -2,10 +2,6 @@
 Provide an interface for creating families of related or dependent objects without specifying their concrete classes.[1]  
 
 Provides a way to encapsulate a group of individual factories that have a common theme without specifying their concrete classes. In normal usage, the client software creates a concrete implementation of the abstract factory and then uses the generic interface of the factory to create the concrete objects that are part of the theme. The client doesn't know (or care) which concrete objects it gets from each of these internal factories, since it uses only the generic interfaces of their products.[1] This pattern separates the details of implementation of a set of objects from their general usage and relies on object composition, as object creation is implemented in methods exposed in the factory interface.[2]  
-- [1] https://sourcemaking.com/design_patterns/abstract_factory
-- [2] https://en.wikipedia.org/wiki/Abstract_factory_pattern
-- Factory/Abstract factory confusion: https://stackoverflow.com/questions/4719822/factory-abstract-factory-confusion
-- Factory: https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)
 
 ## Examples
 ### JSON illustration:
@@ -41,7 +37,8 @@ Provides a way to encapsulate a group of individual factories that have a common
   }
 }
 ```
-### PHP 1 (https://en.wikipedia.org/wiki/Abstract_factory_pattern#PHP_example):
+### PHP #1:
+https://en.wikipedia.org/wiki/Abstract_factory_pattern#PHP_example
 ```php
 <?php
 
@@ -105,7 +102,8 @@ switch ($appearance) {
 $button = $factory->createButton();
 $button->paint();
 ```
-### PHP 2 (https://sourcemaking.com/design_patterns/abstract_factory/php/2):
+### PHP #2:
+https://sourcemaking.com/design_patterns/abstract_factory/php/2
 ```php
 <?php
 
@@ -274,7 +272,8 @@ class SamsPHPBook extends AbstractPHPBook {
 
 ?>
 ```
-### PHP 3 (https://sourcemaking.com/design_patterns/abstract_factory/php/3):
+### PHP #3:
+https://sourcemaking.com/design_patterns/abstract_factory/php/3
 ```php
 <?php
 /*
@@ -345,7 +344,7 @@ $factory = $abstractfactory::getFactory();
 $db = $factory->createInstance();
 ?>
 ```
-### PHP 4:
+### PHP #4:
 ```php
 <?php
 
@@ -407,3 +406,11 @@ class ConcreteProductN extends AbstractProduct
     }
 }
 ```
+
+## Sources
+- [1] https://sourcemaking.com/design_patterns/abstract_factory
+- [2] https://en.wikipedia.org/wiki/Abstract_factory_pattern
+
+## See also
+- Factory/Abstract factory confusion: https://stackoverflow.com/questions/4719822/factory-abstract-factory-confusion
+- Factory: https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)

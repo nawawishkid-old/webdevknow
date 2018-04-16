@@ -3,3 +3,5 @@
 - https://en.wikipedia.org/wiki/Singleton_pattern  
 
 ## Examples
+## Sources
+## See also
