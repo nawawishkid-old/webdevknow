@@ -158,3 +158,4 @@ final class Singleton
 
 ## See also
 - Lazy initialization: https://en.wikipedia.org/wiki/Lazy_initialization
+- Why singleton have no use in PHP?: http://blog.gordon-oheim.biz/2011-01-17-Why-Singletons-have-no-use-in-PHP/
