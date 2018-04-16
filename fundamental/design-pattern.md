@@ -48,6 +48,7 @@ JSON illustration:
 PHP:
 ```php
 <?php
+
 class AbstractSomethingFactory
 {
 		abstract public function createProduct();
@@ -55,55 +56,55 @@ class AbstractSomethingFactory
 
 class ConcreteSomethingFactoryOne extends AbstractSomethingFactory
 {
-	public function createProduct()
-	{
-		return new ConcreteProductOne();
-	}
+		public function createProduct()
+		{
+				return new ConcreteProductOne();
+		}
 }
 
 class ConcreteSomethingFactoryTwo extends AbstractSomethingFactory
 {
-	public function createProduct()
-	{
-		return new ConcreteProductTwo();
-	}
+		public function createProduct()
+		{
+				return new ConcreteProductTwo();
+		}
 }
 
 class ConcreteSomethingFactoryN extends AbstractSomethingFactory
 {
-	public function createProduct()
-	{
-		return new ConcreteProductN();
-	}
+		public function createProduct()
+		{
+				return new ConcreteProductN();
+		}
 }
 
 class AbstractProduct
 {
-	abstract public function doSomething();
+		abstract public function doSomething();
 }
 
-class ConcreteProductOne
+class ConcreteProductOne extends AbstractProduct
 {
-	public function doSomething()
-	{
-		// do something
-	}
+		public function doSomething()
+		{
+				// do something
+		}
 }
 
-class ConcreteProductTwo
+class ConcreteProductTwo extends AbstractProduct
 {
-	public function doSomething()
-	{
-		// do something
-	}
+		public function doSomething()
+		{
+				// do something
+		}
 }
 
-class ConcreteProductN
+class ConcreteProductN extends AbstractProduct
 {
-	public function doSomething()
-	{
-		// do something
-	}
+		public function doSomething()
+		{
+				// do something
+		}
 }
 ```
 
