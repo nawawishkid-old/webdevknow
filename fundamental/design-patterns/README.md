@@ -16,7 +16,7 @@
 - Bridge
 - Composite
 - Decorator
-- Facade
+- [Facade](structural/facade-pattern.md)
 - Flyweight
 - Private class data
 - Proxy

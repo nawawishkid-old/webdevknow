@@ -1,0 +1,59 @@
+{
+	"anti_-_pattern": {
+		"name": {
+			"en_US": "Anti-pattern",
+			"th_TH": ""
+		},
+		"explanation": {
+			"en_US": "As opposed to design patterns which are common approaches to common problems which have been formalized and are generally considered a good development practice, anti-patterns are the opposite and are undesirable.",
+			"th_TH": ""
+		},
+		"srcs": {
+			"en_US": [
+				"https://en.wikipedia.org/wiki/Anti-pattern",
+				"https://sourcemaking.com/antipatterns",
+				"https://stackoverflow.com/questions/980601/what-is-an-anti-pattern"
+			],
+			"th_TH": [
+				"https://2bedev.com/365days-of-program-day-68/"
+			]
+		},
+		"tags": []
+	},
+
+	"shared_-_nothing_architecture": {
+		"name": {
+			"en_US": "Shared-nothing architecture",
+			"th_TH": ""
+		},
+		"explanation": {
+			"en_US": "A shared-nothing architecture (SN) is a distributed-computing architecture in which each node is independent and self-sufficient, and there is no single point of contention across the system. More specifically, none of the nodes share memory or disk storage.",
+			"th_TH": ""
+		},
+		"srcs": {
+			"en_US": ["https://en.wikipedia.org/wiki/Shared-nothing_architecture"],
+			"th_TH": []
+		},
+		"tags": []
+	},
+
+	"god_object": {
+		"name": {
+			"en_US": "God object",
+			"th_TH": ""
+		},
+		"explanation": {
+			"en_US": "In object-oriented programming, a God object is an object that knows too much or does too much. The God object is an example of an anti-pattern.",
+			"th_TH": ""
+		},
+		"srcs": {
+			"en_US": [
+				"https://en.wikipedia.org/wiki/God_object"
+			],
+			"th_TH": []
+		},
+		"tags": [
+			"OOP", "design pattern"
+		]
+	}
+}

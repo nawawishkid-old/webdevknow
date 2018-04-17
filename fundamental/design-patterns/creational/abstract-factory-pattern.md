@@ -5,7 +5,117 @@
 
 > Provides a way to encapsulate a group of individual factories that have a common theme without specifying their concrete classes. In normal usage, the client software creates a concrete implementation of the abstract factory and then uses the generic interface of the factory to create the concrete objects that are part of the theme. The client doesn't know (or care) which concrete objects it gets from each of these internal factories, since it uses only the generic interfaces of their products. This pattern separates the details of implementation of a set of objects from their general usage and relies on object composition, as object creation is implemented in methods exposed in the factory interface.<sup>[[2]](#sources)</sup>  
 
+![Abstract factory - look and feel example](http://www.oodesign.com/images/creational/abstract-factory-pattern-example.png)
+
+## Usage<sup>[[2]](#sources)</sup>
+The factory determines the actual concrete type of object to be created, and it is here that the object is actually created (in C++, for instance, by the new operator). However, the factory only returns an abstract pointer to the created concrete object.  
+
+This insulates client code from object creation by having clients ask a factory object to create an object of the desired abstract type and to return an abstract pointer to the object.  
+
+As the factory only returns an abstract pointer, the client code (that requested the object from the factory) does not know — and is not burdened by — the actual concrete type of the object that was just created. However, the type of a concrete object (and hence a concrete factory) is known by the abstract factory; for instance, the factory may read it from a configuration file. The client has no need to specify the type, since it has already been specified in the configuration file. In particular, this means:  
+- The client code has no knowledge whatsoever of the concrete type, not needing to include any header files or class declarations related to it. The client code deals only with the abstract type. Objects of a concrete type are indeed created by the factory, but the client code accesses such objects only through their abstract interface.  
+- Adding new concrete types is done by modifying the client code to use a different factory, a modification that is typically one line in one file. The different factory then creates objects of a different concrete type, but still returns a pointer of the same abstract type as before — thus insulating the client code from change. This is significantly easier than modifying the client code to instantiate a new type, which would require changing every location in the code where a new object is created (as well as making sure that all such code locations also have knowledge of the new concrete type, by including for instance a concrete class header file). If all factory objects are stored globally in a singleton object, and all client code goes through the singleton to access the proper factory for object creation, then changing factories is as easy as changing the singleton object  
+
 ## Examples
+#### Unspecified language:
+(http://www.oodesign.com/abstract-factory-pattern.html)
+```
+abstract class AbstractProductA {
+    public abstract void operationA1();
+    public abstract void operationA2();
+}
+
+class ProductA1 extends AbstractProductA {
+    ProductA1(String arg) {
+        System.out.println("Hello " + arg);
+    } 
+
+    // Implement the code here
+    public void operationA1() { };
+    public void operationA2() { };
+}
+
+class ProductA2 extends AbstractProductA {
+    ProductA2(String arg) {
+        System.out.println("Hello " + arg);
+    }
+
+    // Implement the code here
+    public void operationA1() { };
+    public void operationA2() { };
+}
+
+abstract class AbstractProductB {
+    //public abstract void operationB1();
+    //public abstract void operationB2();
+}
+
+class ProductB1 extends AbstractProductB {
+    ProductB1(String arg) {
+        System.out.println("Hello " + arg);
+    }
+
+    // Implement the code here
+}
+
+class ProductB2 extends AbstractProductB {
+    ProductB2(String arg) {
+        System.out.println("Hello " + arg);
+    }
+
+    // Implement the code here
+}
+
+abstract class AbstractFactory {
+    abstract AbstractProductA createProductA();
+    abstract AbstractProductB createProductB();
+}
+
+class ConcreteFactory1 extends AbstractFactory {
+    AbstractProductA createProductA() {
+        return new ProductA1("ProductA1");
+    }
+
+    AbstractProductB createProductB() {
+        return new ProductB1("ProductB1");
+    }
+}
+
+class ConcreteFactory2 extends AbstractFactory {
+    AbstractProductA createProductA() {
+        return new ProductA2("ProductA2");
+    }
+
+    AbstractProductB createProductB() {
+        return new ProductB2("ProductB2");
+    }
+}
+
+//Factory creator - an indirect way of instantiating the factories
+class FactoryMaker {
+    private static AbstractFactory pf = null;
+
+    static AbstractFactory getFactory(String choice) {
+        if (choice.equals("a")) {
+            pf=new ConcreteFactory1();
+        } else if(choice.equals("b")){
+            pf=new ConcreteFactory2();
+        }
+
+        return pf;
+    }
+}
+
+// Client
+public class Client {
+    public static void main(String args[]) {
+        AbstractFactory pf = FactoryMaker.getFactory("a");
+        AbstractProductA product = pf.createProductA();
+
+        //more function calls on product
+    }
+}
+```
 #### JSON illustration:
 ```json
 {
@@ -416,3 +526,4 @@ class ConcreteProductN extends AbstractProduct
 ## See also
 - Factory/Abstract factory confusion: https://stackoverflow.com/questions/4719822/factory-abstract-factory-confusion
 - Factory: https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)
+- Abstract Factory: http://www.oodesign.com/abstract-factory-pattern.html
