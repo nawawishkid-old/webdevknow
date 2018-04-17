@@ -16,6 +16,13 @@ As the factory only returns an abstract pointer, the client code (that requested
 - The client code has no knowledge whatsoever of the concrete type, not needing to include any header files or class declarations related to it. The client code deals only with the abstract type. Objects of a concrete type are indeed created by the factory, but the client code accesses such objects only through their abstract interface.  
 - Adding new concrete types is done by modifying the client code to use a different factory, a modification that is typically one line in one file. The different factory then creates objects of a different concrete type, but still returns a pointer of the same abstract type as before — thus insulating the client code from change. This is significantly easier than modifying the client code to instantiate a new type, which would require changing every location in the code where a new object is created (as well as making sure that all such code locations also have knowledge of the new concrete type, by including for instance a concrete class header file). If all factory objects are stored globally in a singleton object, and all client code goes through the singleton to access the proper factory for object creation, then changing factories is as easy as changing the singleton object  
 
+The classes that participate to the Abstract Factory pattern are:<sup>[[3]](#sources)</sup>  
+- **AbstractFactory** - declares a interface for operations that create abstract products.
+- **ConcreteFactory** - implements operations to create concrete products.
+- **AbstractProduct** - declares an interface for a type of product objects.
+- **Product** - defines a product to be created by the corresponding ConcreteFactory; it implements the AbstractProduct interface.
+- **Client** - uses the interfaces declared by the AbstractFactory and AbstractProduct classes.
+
 ## Examples
 #### Unspecified language:
 (http://www.oodesign.com/abstract-factory-pattern.html)
@@ -522,8 +529,8 @@ class ConcreteProductN extends AbstractProduct
 ## Sources
 - [1] https://sourcemaking.com/design_patterns/abstract_factory
 - [2] https://en.wikipedia.org/wiki/Abstract_factory_pattern
+- [3] http://www.oodesign.com/abstract-factory-pattern.html
 
 ## See also
 - Factory/Abstract factory confusion: https://stackoverflow.com/questions/4719822/factory-abstract-factory-confusion
 - Factory: https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)
-- Abstract Factory: http://www.oodesign.com/abstract-factory-pattern.html
