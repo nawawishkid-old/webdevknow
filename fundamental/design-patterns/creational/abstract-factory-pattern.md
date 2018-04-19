@@ -130,6 +130,8 @@ public class Client {
     "createProduct": ""
   },
 
+  "AbstractProduct": {},
+
   "ConcreteSomethingFactoryOne": {
     "extends": "AbstractSomethingFactory",
     "createProduct": "new ConcreteProductOne"
@@ -143,8 +145,6 @@ public class Client {
     "createProduct": "new ConcreteProductN"
   },
 
-  "AbstractProduct": {},
-
   "ConcreteProductOne": {
     "extends": "AbstractProduct"
   },
@@ -153,6 +153,10 @@ public class Client {
   },
   "ConcreteProductN": {
     "extends": "AbstractProduct"
+  }
+
+  "Client": {
+    "selectedFactory": "ConcreteSomethingFactoryOne"
   }
 }
 ```

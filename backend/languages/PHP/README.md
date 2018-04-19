@@ -1,5 +1,12 @@
 # Backend Development: Language
 ## PHP
+#### PSR
+- https://www.php-fig.org/psr/
+
+#### PHPDoc
+- http://docs.phpdoc.org/guides/docblocks.html  
+- https://github.com/phpDocumentor/fig-standards/blob/master/proposed/phpdoc.md  
+
 Return type declaration:  
 http://php.net/manual/en/functions.returning-values.php#functions.returning-values.type-declaration  
 
