@@ -11,6 +11,13 @@ Typically, this is done by:
 
 The instance is usually stored as a private static variable; the instance is created when the variable is initialized, at some point before the static method is first called.
 
+<blockquote>
+  Essentially, the Singleton pattern is just another form of the global state. Singletons promote obscure APIs that lie about real dependencies and introduce unnecessarily tight coupling between components. They also violate the Single Responsibility Principle because, in addition to their primary duties, they control their own initialization and lifecycle.
+
+  Singletons can easily make unit tests order-dependent because they carry state around for the lifetime of the whole application or unit test suite.
+</blockquote>
+from [TopTal](https://www.toptal.com/qa/how-to-write-testable-code-and-why-it-matters)
+
 ## Examples
 #### Java #1:
 (https://en.wikipedia.org/wiki/Singleton_pattern#Lazy_initialization)

@@ -3,6 +3,9 @@
 #### PSR
 - https://www.php-fig.org/psr/
 
+#### Reference — What does this symbol mean in PHP?
+- https://stackoverflow.com/questions/3737139/reference-what-does-this-symbol-mean-in-php
+
 #### PHPDoc
 - http://docs.phpdoc.org/guides/docblocks.html  
 - https://github.com/phpDocumentor/fig-standards/blob/master/proposed/phpdoc.md  
