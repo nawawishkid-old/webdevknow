@@ -1,5 +1,9 @@
 # Glossary
 
+#### Agile software development
+Describes an approach to software development under which requirements and solutions evolve through the collaborative effort of self-organizing and cross-functional teams and their customer(s)/end user(s).[1] It advocates adaptive planning, evolutionary development, early delivery, and continual improvement, and it encourages rapid and flexible response to change.
+- https://en.wikipedia.org/wiki/Agile_software_development
+
 #### Anti-pattern
 - https://en.wikipedia.org/wiki/Anti-pattern  
 
@@ -71,6 +75,11 @@ Modular programming is a software design technique that emphasizes separating th
 #### Node
 - 
 
+#### Open/closed principle
+In object-oriented programming, the open/closed principle states "software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification";[1] that is, such an entity can allow its behaviour to be extended without modifying its source code.
+- https://en.wikipedia.org/wiki/Open/closed_principle
+- https://codingjourneyman.com/2015/02/16/solid-open-closed-principle/
+
 #### Programming paradigm
 Programming paradigms are a way to classify programming languages based on their features. Languages can be classified into multiple paradigms.  
 - https://en.wikipedia.org/wiki/Programming_paradigm
@@ -102,6 +111,10 @@ Service refers to a software functionality or a set of software functionalities 
 #### Side effect
 A function or expression is said to have a side effect if it modifies some state outside its scope or has an observable interaction with its calling functions or the outside world besides returning a value. For example, a particular function might modify a global variable or static variable, modify one of its arguments, raise an exception, write data to a display or file, read data, or call other side-effecting functions.
 - https://en.wikipedia.org/wiki/Side_effect_(computer_science)
+
+#### SOLID principle
+In object-oriented computer programming, the term SOLID is a mnemonic acronym for five design principles intended to make software designs more understandable, flexible and maintainable.
+- https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)
 
 #### State
 A program is described as stateful if it is designed to remember preceding events or user interactions;[1] the remembered information is called the state of the system.  

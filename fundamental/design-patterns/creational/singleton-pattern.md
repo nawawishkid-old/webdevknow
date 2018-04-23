@@ -16,7 +16,8 @@ The instance is usually stored as a private static variable; the instance is cre
 
   Singletons can easily make unit tests order-dependent because they carry state around for the lifetime of the whole application or unit test suite.
 </blockquote>
-from [TopTal](https://www.toptal.com/qa/how-to-write-testable-code-and-why-it-matters)
+
+quote from [TopTal](https://www.toptal.com/qa/how-to-write-testable-code-and-why-it-matters)
 
 ## Examples
 #### Java #1:
