@@ -6,4 +6,5 @@
 
 ### Git
 A successful Git branching model
+![A successful Git branching model](http://nvie.com/img/git-model@2x.png)
 - http://nvie.com/posts/a-successful-git-branching-model/

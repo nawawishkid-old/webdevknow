@@ -15,7 +15,8 @@ https://en.wikipedia.org/wiki/Immediately-invoked_function_expression
 [JS bin](http://jsbin.com/jexezifaji/1/edit?js,output)  
 
 ### Module pattern
-https://stackoverflow.com/questions/17776940/javascript-module-pattern-with-example  
+- JavaScript module pattern with example -- https://stackoverflow.com/questions/17776940/javascript-module-pattern-with-example  
+- ES modules: A cartoon deep-dive -- https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/
 
 
 ## JavaScript
